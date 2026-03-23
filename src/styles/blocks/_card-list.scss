@@ -1,0 +1,12 @@
+.card-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &__item {
+        flex-shrink: 1;
+        width: calc(100% / 4 - 15px);
+        border-radius: 10px;
+    }
+}
