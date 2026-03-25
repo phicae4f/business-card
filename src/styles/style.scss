@@ -5,9 +5,12 @@
 @use "./blocks/layout";
 @use "./global/reboot";
 @use "./global/container";
+@use "./global/visually-hidden";
 
 
 //BLOCKS
 @use "./blocks/equipment";
 @use "./blocks/card-list";
 @use "./blocks/card";
+@use "./blocks/number";
+@use "./blocks/hero";

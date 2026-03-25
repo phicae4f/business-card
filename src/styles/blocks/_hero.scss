@@ -1,0 +1,10 @@
+@use "../global/variables" as *;
+
+.hero {
+    width: 100%;
+    background-color: $color-green;
+    
+    &__wrapper {
+        width: 100%
+    }
+}

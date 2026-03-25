@@ -1,0 +1,51 @@
+@use "../global/variables" as *;
+
+.number {
+position: relative;
+width: auto;
+  margin: 0 auto;
+  background-color: $color-dark-green;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 70px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  transition: background-color $transition-300, border $transition-300;
+  $root: &;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+      background-color: transparent;
+      border: 3px solid $color-dark-green;
+
+      #{$root}__icon, #{$root}__phone {
+              color: $color-dark-green;
+
+      }
+  }
+
+  &__icon, &__phone {
+    color: $color-white;
+    transition: color $transition-300;
+  }
+
+  &__phone {    
+    display: flex;
+    font-family: $ff-play;
+    font-size: 26px;
+    font-weight: 900;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    }
+  }
+}
