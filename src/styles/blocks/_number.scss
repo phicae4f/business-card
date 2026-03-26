@@ -4,7 +4,7 @@
 position: relative;
 width: auto;
   margin: 0 auto;
-  background-color: $color-dark-green;
+  background-color: $color-dark-purple;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -19,10 +19,10 @@ width: auto;
   &:focus,
   &:focus-visible {
       background-color: transparent;
-      border: 3px solid $color-dark-green;
+      border: 3px solid $color-dark-purple;
 
       #{$root}__icon, #{$root}__phone {
-              color: $color-dark-green;
+              color: $color-dark-purple;
 
       }
   }

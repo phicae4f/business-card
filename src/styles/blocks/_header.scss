@@ -1,0 +1,88 @@
+@use "../global/variables" as *;
+
+.header {
+    background-color: $color-white;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid $color-light-purple;
+    
+    &__wrapper {
+        padding: 50px 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+        color: $color-black;
+
+        & h2 {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: left;
+
+            & span {
+                font-size: 20px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            
+            & span:first-child {
+                font-size: 40px;
+                font-weight: 900;
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__location {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 18px;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        
+        & button {
+            font-size: 24px;
+            cursor: pointer;
+            color: $color-black;
+            transition: color $transition-300;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            font-family: $ff-play;
+            
+            &:hover, &:focus-visible, &:focus {
+                color: $color-purple-transparent;
+            }
+        }
+
+    }
+}

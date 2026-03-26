@@ -1,12 +1,18 @@
 //COLORS
-$color-green: #008a57a7;
-$color-dark-green: #004b30;
-$color-light-green: #e1ffe0;
-$color-shadow-green: #72ffcb9c;
+// $color-purple-transparent: #008a57a7;
+// $color-dark-purple: #004b30;
+// $color-light-purple: #e1ffe0;
+// $color-shadow-purple: #2ffcb9c;
+
+$color-purple-transparent: #00198aa7;
+$color-dark-purple: #04004b;
+$color-light-purple: #e0e0ff;
+$color-purple: #c3c3fa;
+$color-shadow-purple: #7277ff9c;
 
 $color-black: #000000;
 $color-gray: #b4b4b4;
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 
 // $color-pink:
 
@@ -16,6 +22,5 @@ $ff-play: "Play", sans-serif;
 //VIEWPORT
 $vp-tablet: 1023px;
 $vp-mobile: 767px;
-
 
 $transition-300: ease-in 0.3s;

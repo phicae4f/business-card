@@ -2,7 +2,7 @@
 
 .card {
   border-radius: 10px;
-  border: 2px solid $color-dark-green;
+  border: 2px solid $color-dark-purple;
   background-color: $color-white;
   padding: 15px 15px;
   display: flex;
@@ -21,13 +21,13 @@
   &:hover,
   &:focus,
   &:focus-visible {
-    box-shadow: 0 10px 20px -5px $color-green;
-    border: 2px solid $color-green;
+    box-shadow: 0 10px 20px -5px $color-purple-transparent;
+    border: 2px solid $color-purple-transparent;
 
     #{$root}__amount {
-      color: $color-green;
+      color: $color-purple-transparent;
       background-color: transparent;
-      border: 2px solid $color-green;
+      border: 2px solid $color-purple-transparent;
     }
   }
 
@@ -49,7 +49,7 @@
       bottom: -15px;
       height: 5px;
       width: 100%;
-      background-color: $color-light-green;
+      background-color: $color-light-purple;
     }
   }
 
@@ -57,12 +57,12 @@
     width: 100%;
     min-height: 240px;
     border-radius: 10px 10px 10px 10px;
-    border: 2px solid $color-green;
+    border: 2px solid $color-purple-transparent;
   }
 
   &__title {
     margin: 0;
-    color: $color-dark-green;
+    color: $color-dark-purple;
     font-size: 26px;
     text-align: left;
   }
@@ -95,14 +95,14 @@
     &--removable {
       margin-top: 15px;
       position: relative;
-      background-color: $color-dark-green;
+      background-color: $color-dark-purple;
       padding: 10px 15px 10px 35px;
       border-radius: 30px;
 
       #{$root}__info-item-text {
         width: 100%;
         z-index: 10;
-        color: $color-dark-green;
+        color: $color-dark-purple;
 
         & svg {
           position: absolute;
@@ -119,7 +119,7 @@
         height: 100%;
         bottom: 0;
         border-bottom: none;
-        background-color: $color-light-green;
+        background-color: $color-light-purple;
         border-radius: 30px;
       }
     }
@@ -130,7 +130,7 @@
     color: $color-black;
 
     &--bold {
-      color: $color-dark-green;
+      color: $color-dark-purple;
       font-weight: 900;
     }
   }
@@ -143,9 +143,9 @@
     padding: 10px 15px;
     border-radius: 25px;
     width: auto;
-    background-color: $color-light-green;
+    background-color: $color-light-purple;
     border: 2px solid transparent;
-    color: $color-dark-green;
+    color: $color-dark-purple;
     font-size: 20px;
     font-weight: 900;
     transition:
