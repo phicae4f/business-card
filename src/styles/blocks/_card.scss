@@ -1,4 +1,5 @@
 @use "../global/variables" as *;
+@use "../global/mixins" as *;
 
 .card {
   border-radius: 10px;
@@ -16,7 +17,6 @@
     box-shadow $transition-300,
     border $transition-300;
   box-shadow: none;
-  $root: &;
 
   &:hover,
   &:focus,
@@ -24,11 +24,21 @@
     box-shadow: 0 10px 20px -5px $color-purple-transparent;
     border: 2px solid $color-purple-transparent;
 
-    #{$root}__amount {
+    .card__amount {
       color: $color-purple-transparent;
       background-color: transparent;
       border: 2px solid $color-purple-transparent;
     }
+  }
+
+  @include vp-1023 {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  @include vp-767 {
+    padding: 10px;
+    gap: 12px;
   }
 
   &__img-wrapper {
@@ -51,6 +61,14 @@
       width: 100%;
       background-color: $color-light-purple;
     }
+
+    @include vp-1023 {
+      min-height: 260px;
+    }
+
+    @include vp-767 {
+      min-height: 220px;
+    }
   }
 
   &__img {
@@ -58,6 +76,14 @@
     min-height: 240px;
     border-radius: 10px 10px 10px 10px;
     border: 2px solid $color-purple-transparent;
+
+    @include vp-1023 {
+      min-height: 200px;
+    }
+
+    @include vp-767 {
+      min-height: 180px;
+    }
   }
 
   &__title {
@@ -65,6 +91,14 @@
     color: $color-dark-purple;
     font-size: 26px;
     text-align: left;
+
+    @include vp-1023 {
+      font-size: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   &__info-list {
@@ -74,6 +108,16 @@
     width: 100%;
     height: 100%;
     margin-bottom: 30px;
+
+    @include vp-1023 {
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      gap: 12px;
+      margin-bottom: 15px;
+    }
   }
 
   &__info-item {
@@ -99,7 +143,7 @@
       padding: 10px 15px 10px 35px;
       border-radius: 30px;
 
-      #{$root}__info-item-text {
+      .card__info-item-text {
         width: 100%;
         z-index: 10;
         color: $color-dark-purple;
@@ -123,6 +167,19 @@
         border-radius: 30px;
       }
     }
+
+    @include vp-767 {
+      &--removable {
+        padding: 8px 12px 8px 30px;
+
+        .card__info-item-text svg {
+          left: 10px;
+          top: 14px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
   }
 
   &__info-item-text {
@@ -132,6 +189,14 @@
     &--bold {
       color: $color-dark-purple;
       font-weight: 900;
+    }
+
+    @include vp-1023 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
     }
   }
 
@@ -152,5 +217,15 @@
       color $transition-300,
       background-color $transition-300,
       border $transition-300;
+
+    @include vp-1023 {
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      padding: 6px 10px;
+    }
   }
 }

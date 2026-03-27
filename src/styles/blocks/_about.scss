@@ -1,0 +1,255 @@
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+
+.about {
+  padding: 150px 0;
+  width: 100%;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+
+    @include vp-1023 {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__right,
+  &__left {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-shrink: 1;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include vp-1023 {
+      order: 2;
+    }
+  }
+
+  &__title,
+  &__principles-title {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    color: $color-dark-purple;
+    font-size: 20px;
+
+    @include vp-1023 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+
+    & p {
+      margin: 0;
+      color: $color-dark-gray;
+      font-size: 22px;
+
+      @include vp-1023 {
+        font-size: 18px;
+      }
+
+      @include vp-767 {
+        font-size: 16px;
+      }
+    }
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+      gap: 15px;
+    }
+  }
+
+  &__principles {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__principles-title {
+    margin: 0 0 10px;
+  }
+
+  &__list {
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      gap: 20px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: calc(100% / 2 - 30px);
+    color: $color-dark-gray;
+    font-size: 20px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: -30px;
+      top: 15px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: $color-light-purple;
+      border-radius: 50%;
+    }
+
+    @include vp-1023 {
+      width: calc(100% / 2 - 10px);
+      font-size: 18px;
+
+      &::before {
+        width: 16px;
+        height: 16px;
+        left: -25px;
+        top: 12px;
+      }
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-left: 25px;
+      font-size: 16px;
+
+      &::before {
+        left: 0;
+        top: 12px;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $color-dark-purple;
+    border: 1px solid $color-dark-purple;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 22px;
+    color: $color-white;
+    font-family: $ff-play;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:
+      color $transition-300,
+      background-color $transition-300,
+      border $transition-300;
+
+    &:hover,
+    &:focus-visible,
+    &:focus {
+      color: $color-dark-purple;
+      border: 1px solid $color-dark-purple;
+      background-color: transparent;
+    }
+
+    @include vp-1023 {
+      font-size: 18px;
+      padding: 12px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+
+  &__right {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100%;
+    width: 100%;
+
+    @include vp-1023 {
+      order: 1;
+      justify-content: center;
+      min-height: auto;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    right: 0;
+    display: flex;
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+
+    @include vp-1023 {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 250px;
+      margin: 0 auto;
+    }
+
+    @include vp-767 {
+      width: 80%;
+      height: 200px;
+    }
+  }
+
+  &__img-background {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 30%;
+    width: 80%;
+    height: 50%;
+    background-color: $color-light-purple;
+    border-radius: 10px;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}
