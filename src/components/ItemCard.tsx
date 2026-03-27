@@ -1,4 +1,4 @@
-import { IoSettingsOutline, IoSettingsSharp } from "react-icons/io5";
+import { IoSettingsSharp } from "react-icons/io5";
 
 export interface ItemCardProps {
   id: number;

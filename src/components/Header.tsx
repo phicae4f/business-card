@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IoMdPin } from "react-icons/io";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
-import { IoClose } from "react-icons/io5";
 import { scrollToSection } from "../utils/scrollToSection";
 
 export const Header = () => {
