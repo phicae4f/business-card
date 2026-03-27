@@ -148,11 +148,11 @@
     line-height: 1.4;
 
     @include vp-1023 {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     @include vp-767 {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -174,7 +174,7 @@
     padding: 12px 15px;
     background-color: $color-white;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: $color-black;
     transition: all $transition-300;
     border: 1px solid rgba($color-light-purple, 0.2);
@@ -188,13 +188,13 @@
 
     @include vp-1023 {
       width: calc(50% - 7.5px);
-      font-size: 16px;
+      font-size: 18px;
       padding: 10px 12px;
     }
 
     @include vp-767 {
       width: 100%;
-      font-size: 16px;
+      font-size: 18px;
       padding: 8px 10px;
     }
   }
